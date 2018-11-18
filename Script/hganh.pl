@@ -60,8 +60,8 @@ parent('Peter Phillips','Savannah Phillips').
 parent('Peter Phillips','Isla Phillips').
 parent('Zara Phillips','Mia Grace Tindall').
 parent('Mike Tindall','Mia Grace Tindall').
-parent('Prince Diana','Prince William').
-parent('Prince Diana','Prince Harry').
+parent('Princess Diana','Prince William').
+parent('Princess Diana','Prince Harry').
 parent('Prince Charles','Prince William').
 parent('Prince Charles','Prince Harry').
 parent('Captain Mark Phillips','Peter Phillips').
@@ -87,44 +87,98 @@ parent('Prince Phillip','Prince Edward').
 
 % rules
 husband(Person, Wife) :-
-	male(Person),
-	married(Person, Wife).
+	married(Person, Wife),
+	male(Person).
 
 wife(Person, Husband) :-
-	female(Person),
-	married(Person, Husband).
+	married(Person, Husband),
+	female(Person).
 
 father(Parent, Child) :-
-	male(Person),
-	parent(Parent, Child).
+	parent(Parent, Child),
+	male(Parent).
 
 mother(Parent, Child) :-
-	female(Person),
-	parent(Parent, Child).
+	parent(Parent, Child),
+	female(Parent).
 
 son(Child, Parent) :-
-	male(Child),
-	parent(Parent, Child).
+	parent(Parent, Child),
+	male(Child).
 
 daughter(Child, Parent) :-
-	female(Child),
-	parent(Parent, Child).
+	parent(Parent, Child),
+	female(Child).
 
 grandparent(GrandParent, GrandChild) :-
 	parent(GrandParent, Parent),
 	parent(Parent, GrandChild).
 
 grandmother(GrandMother, GrandChild) :-
-	female(GrandMother),
-	grandparent(GrandMother, GrandChild).
+	grandparent(GrandMother, GrandChild),
+	female(GrandMother).
 
 grandfather(GrandFather, GrandChild) :-
-	male(GrandFather),
-	grandparent(GrandFather, GrandChild).
+	grandparent(GrandFather, GrandChild),
+	male(GrandFather).
 
 grandchild(GrandChild, GrandFather) :-
 	grandparent(GrandFather, GrandChild).
 
 grandson(GrandSon, GrandFather) :-
-	male(GrandSon),
-	grandchild(GrandSon, GrandFather).
+	grandchild(GrandSon, GrandFather),
+	male(GrandSon).
+
+granddaughter(GrandDaugter, GrandFather) :-
+	grandchild(GrandDaugter, GrandFather),
+	female(GrandDaugter).
+
+% A sibling is having one or both parents in common
+sibling(Person1, Person2) :-
+	parent(Parent, Person1),
+	parent(Parent, Person2),
+	Person1 \== Person2.
+
+brother(Person, Sibling) :-
+	sibling(Person, Sibling),
+	male(Person).
+
+sister(Person, Sibling) :-
+	sibling(Person, Sibling),
+	female(Person).
+
+% An aunt is a person who is the sister of a parent,
+% or the wife of one's uncle
+aunt(Person, NieceNephew) :-
+	sister(Person, Parent),
+	parent(Parent, NieceNephew).
+
+aunt(Person, NieceNephew) :-
+	wife(Person, Uncle),
+	brother(Uncle, Parent),
+	parent(Parent, NieceNephew).
+
+uncle(Person, NieceNephew) :-
+	brother(Person, Parent),
+	parent(Parent, NieceNephew).
+
+uncle(Person, NieceNephew) :-
+	husband(Person, Aunt),
+	sister(Aunt, Parent),
+	parent(Parent, NieceNephew).
+
+niece(Person, AuntUncle) :-
+	uncle(AuntUncle, Person),
+	male(Person).
+
+niece(Person, AuntUncle) :-
+	aunt(AuntUncle, Person),
+	male(Person).
+
+nephew(Person, AuntUncle) :-
+	uncle(AuntUncle, Person),
+	female(Person).
+
+nephew(Person, AuntUncle) :-
+	aunt(AuntUncle, Person),
+	female(Person).
