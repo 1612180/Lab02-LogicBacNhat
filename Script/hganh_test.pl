@@ -1,12 +1,32 @@
 % load tri thuc
 :- [hganh].
 
+% them new line
 writeln(Line) :-
+	\+ is_list(Line),
 	write(Line),
 	nl.
 
 writeln(no) :-
-	writeln('Khong biet').
+	write('Khong biet'),
+	nl.
+
+% remove duplicate in List
+writeln(List) :-
+	is_list(List),
+	length(List, LenList),
+	LenList > 0,
+	sort(List, SortedList),
+	write(SortedList),
+	nl.
+
+% if list is empty, khong biet
+writeln(List) :-
+	is_list(List),
+	length(List, LenList),
+	LenList == 0,
+	write('Khong biet'),
+	nl.
 
 :- writeln('Go cau_1., cau_2., ... cau_20. de xem cau hoi va cau tra loi').
 
@@ -99,4 +119,84 @@ cau_18 :-
 cau_19 :-
 	writeln('Ai la chau trai cua Prince Phillip ?'),
 	findall(GrandSon, grandson(GrandSon, 'Prince Phillip'), List),
+	writeln(List).
+
+cau_20 :-
+	writeln('Ai la chau trai cua Timothy Laurence ?'),
+	findall(GrandSon, grandson(GrandSon, 'Timothy Laurence'), List),
+	writeln(List).
+
+cau_21 :-
+	writeln('Ai la anh/chi/em ruot cua Prince George ?'),
+	findall(Sibling, sibling(Sibling, 'Prince George'), List),
+	writeln(List).
+
+cau_22 :-
+	writeln('Ai la anh/chi/em ruot cua James, Viscount Severn ?'),
+	findall(Sibling, sibling(Sibling, 'James, Viscount Severn'), List),
+	writeln(List).
+
+cau_23 :-
+	writeln('Ai la anh/em trai cua Prince William ?'),
+	findall(Brother, brother(Brother, 'Prince William'), List),
+	writeln(List).
+
+cau_24 :-
+	writeln('Ai la anh/em trai cua Princess Anne ?'),
+	findall(Brother, brother(Brother, 'Princess Anne'), List),
+	writeln(List).
+
+cau_25 :-
+	writeln('Ai la chi/em gai cua Kate Middleton ?'),
+	findall(Sister, sister(Sister, 'Kate Middleton'), List),
+	writeln(List).
+
+cau_26 :-
+	writeln('Ai la chi/em gai cua Isla Phillips ?'),
+	findall(Sister, sister(Sister, 'Isla Phillips'), List),
+	writeln(List).
+
+cau_27 :-
+	writeln('Ai la chi/em gai cua Prince George ?'),
+	findall(Sister, sister(Sister, 'Prince George'), List),
+	writeln(List).
+
+cau_28 :-
+	writeln('Ai la di cua Prince George ?'),
+	findall(Aunt, aunt(Aunt, 'Prince George'), List),
+	writeln(List).
+
+cau_29 :-
+	writeln('Ai la di cua Prince William ?'),
+	findall(Aunt, aunt(Aunt, 'Prince William'), List),
+	writeln(List).
+
+cau_30 :-
+	writeln('Ai la cau cua James, Viscount Severn ?'),
+	findall(Uncle, uncle(Uncle, 'James, Viscount Severn'), List),
+	writeln(List).
+
+cau_31 :-
+	writeln('Ai la cau cua Mike Tindall ?'),
+	findall(Uncle, uncle(Uncle, 'Mike Tindall'), List),
+	writeln(List).
+
+cau_32 :-
+	writeln('Ai la chau trai cua Prince Charles ?'),
+	findall(Niece, niece(Niece, 'Prince Charles'), List),
+	writeln(List).
+
+cau_33 :-
+	writeln('Ai la chau trai cua Camilla Parker Bowles ?'),
+	findall(Niece, niece(Niece, 'Camilla Parker Bowles'), List),
+	writeln(List).
+
+cau_34 :-
+	writeln('Ai la chau gai cua Queen Elizabeth II ?'),
+	findall(Nephew, nephew(Nephew, 'Queen Elizabeth II'), List),
+	writeln(List).
+
+cau_35 :-
+	writeln('Ai la chau gai cua Zara Phillips ?'),
+	findall(Nephew, nephew(Nephew, 'Zara Phillips'), List),
 	writeln(List).

@@ -72,9 +72,9 @@ parent('Sarah Ferguson','Princess Beatrice').
 parent('Sarah Ferguson','Princess Eugenie').
 parent('Prince Andrew','Princess Beatrice').
 parent('Prince Andrew','Princess Eugenie').
-parent('Sophie Rhys-jones','James,Viscount Severn').
+parent('Sophie Rhys-jones','James, Viscount Severn').
 parent('Sophie Rhys-jones','Lady Louise Mountbatten-Windsor').
-parent('Prince Edward','James,Viscount Severn').
+parent('Prince Edward','James, Viscount Severn').
 parent('Prince Edward','Lady Louise Mountbatten-Windsor').
 parent('Queen Elizabeth II','Prince Charles').
 parent('Queen Elizabeth II','Princess Anne').
