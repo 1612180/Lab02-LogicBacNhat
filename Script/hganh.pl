@@ -102,12 +102,15 @@ mother(Parent, Child) :-
 	parent(Parent, Child),
 	female(Parent).
 
+child(Child, Parent) :-
+	parent(Parent, Child).
+
 son(Child, Parent) :-
-	parent(Parent, Child),
+	child(Child, Parent),
 	male(Child).
 
 daughter(Child, Parent) :-
-	parent(Parent, Child),
+	child(Child, Parent),
 	female(Child).
 
 grandparent(GrandParent, GrandChild) :-
