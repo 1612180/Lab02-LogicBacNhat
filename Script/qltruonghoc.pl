@@ -109,6 +109,15 @@ english_degree('Nguyen Chi Thuc', 'VNU').
 english_degree('Nguyen Buu Loc', 'VNU').
 english_degree('Tran Duy Thanh', 'VNU').
 
+is_student(Name) :-
+	student(Name, _, _, _, _, _).
+
+is_teacher(Name) :-
+	teacher(Name, _, _).
+
+is_teacher_department(Name) :-
+	department_head(Name, _).
+
 mssv(Student, MSSV) :-
 	student(Student, MSSV, _, _, _, _).
 
@@ -292,6 +301,11 @@ scholarship_A(Student) :-
 	grade_A(Student),
 	(drl_S(Student);
 		drl_A(Student)).
+
+% co hoc bong
+has_scholarship(Student) :-
+	scholarship_S(Student);
+	scholarship_A(Student).
 
 % canh cao hoc vu neu diem thap hoac diem ren luyen thap
 punish(Student) :-

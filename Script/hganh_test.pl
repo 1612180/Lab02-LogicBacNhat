@@ -1,23 +1,23 @@
 % load tri thuc
 :- [hganh, writeln].
 
-:- writeln('Go cau_1., cau_2., ... cau_20. de xem cau hoi va cau tra loi').
+:- writeln('Go cau_1., cau_2., ... cau_35. de xem cau hoi va cau tra loi').
 
 cau_1 :-
 	writeln('Ai la me cua Prince George ?'),
-	mother(Mother, 'Prince George') -> writeln(Mother); writeln(no).
+	mother(Mother, 'Prince George') -> writeln(Mother); writeln('Khong biet').
 
 cau_2 :-
 	writeln('Ai la cha cua Mia Grace Tindall ?'),
-	father(Father, 'Mia Grace Tindall') -> writeln(Father); writeln(no).
+	father(Father, 'Mia Grace Tindall') -> writeln(Father); writeln('Khong biet').
 
 cau_3 :-
 	writeln('Ai la vo cua Prince Harry ?'),
-	wife(Wife, 'Prince Harry') -> writeln(Wife); writeln(no).
+	wife(Wife, 'Prince Harry') -> writeln(Wife); writeln('Khong biet').
 
 cau_4 :-
 	writeln('Ai la chong cua Zara Phillips ?'),
-	husband(Husband, 'Zara Phillips') -> writeln(Husband); writeln(no).
+	husband(Husband, 'Zara Phillips') -> writeln(Husband); writeln('Khong biet').
 
 cau_5 :-
 	writeln('Ai la con cua Prince Charles ?'),

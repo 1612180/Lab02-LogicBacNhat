@@ -4,10 +4,6 @@ writeln(Line) :-
 	write(Line),
 	nl.
 
-writeln(no) :-
-	write('Khong biet'),
-	nl.
-
 % remove duplicate in List
 writeln(List) :-
 	is_list(List),
