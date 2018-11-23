@@ -1,337 +1,412 @@
-% Quan ly truong hoc
+% truong - khoa - bo mon - thay co
+%        - doan the - thay co
+%        - phong ban - thay co
 
-teacher('Le Hoai Bac', 'male', 'lhbac@hcmus.edu.vn').
-teacher('Chau Ngoc Phuong', 'female', 'chphuong@hcmus.edu.vn').
-teacher('Tran Thai Son', 'male', 'thson@hcmus.edu.vn').
-teacher('Vo Hoai Viet', 'male', 'vhviet@hcmus.edu.vn').
-teacher('Le Quoc Hoa', 'male', 'lqhoa@hcmus.edu.vn').
-teacher('Le Giang Thanh', 'female', 'lgthanh@hcmus.edu.vn').
-teacher('Dinh Ba Tien', 'male', 'dbtien@hcmus.edu.vn').
-teacher('Tran Minh Triet', 'male', 'tmtriet@hcmus.edu.vn').
-teacher('Luong Vi Minh', 'male', 'lvminh@hcmus.edu.vn').
-teacher('Pham Tuan Son', 'male', 'ptson@hcmus.edu.vn').
-teacher('Le Van Luyen', 'male', 'lvluyen@hcmus.edu.vn').
-teacher('Nguyen Dinh Thuc', 'male', 'ndthuc@hcmus.edu.vn').
-teacher('Nguyen Van Vu', 'male', 'nvvu@hcmus.edu.vn').
-teacher('Pham Nguyen Cuong', 'male', 'pncuong@hcmus.edu.vn').
+truong('HCMUS').
 
-department_head('Nguyen Dinh Thuc', 'Cong nghe Tri thuc').
-department_head('Le Hoai Bac', 'Khoa hoc May tinh').
-department_head('Nguyen Van Vu', 'Cong nghe Phan mem').
-department_head('Pham Nguyen Cuong', 'He thong Thong tin').
+khoa('CNTT').
+khoa('Toan-tin').
+khoa('Sinh hoc').
 
-subject('Tri tue nhan tao').
-subject('Do hoa may tinh').
-subject('He dieu hanh').
-subject('Nhap mon cong nghe phan mem').
-subject('Lap trinh tren thiet bi di dong').
-subject('Co so du lieu').
-subject('He quan tri co so du lien').
-subject('Kien truc may tinh').
-subject('Toan to hop').
+doan_the('Doan truong').
+doan_the('Dang uy truong').
 
-subject_of_department('Tri tue nhan tao', 'Khoa hoc May tinh').
-subject_of_department('Do hoa may tinh', 'Cong nghe Tri thuc').
-subject_of_department('He dieu hanh', 'Cong nghe Phan mem').
-subject_of_department('Nhap mon cong nghe phan mem', 'Cong nghe Phan mem').
-subject_of_department('Lap trinh tren thiet bi di dong', 'Cong nghe Phan mem').
-subject_of_department('Co so du lieu', 'He thong Thong tin').
-subject_of_department('He quan tri co so du lieu', 'He thong Thong tin').
-subject_of_department('Kien truc may tinh', 'Khoa hoc May tinh').
-subject_of_department('Toan to hop', 'Khoa hoc May tinh').
+bo_mon('Cong nghe tri thuc').
+bo_mon('Khoa hoc may tinh').
+bo_mon('Cong nghe phan mem').
+bo_mon('Dai so').
+bo_mon('Giai tich').
+bo_mon('Di truyen').
+bo_mon('Vi sinh').
 
-teach_subject('Le Hoai Bac', 'Tri tue nhan tao').
-teach_subject('Chau Ngoc Phuong', 'Tri tue nhan tao').
-teach_subject('Tran Thai Son', 'Do hoa may tinh').
-teach_subject('Vo Hoai Viet', 'Do hoa may tinh').
-teach_subject('Le Quoc Hoa', 'He dieu hanh').
-teach_subject('Le Giang Thanh', 'He dieu hanh').
-teach_subject('Dinh Ba Tien', 'Nhap mon cong nghe phan mem').
-teach_subject('Tran Minh Triet', 'Lap trinh tren thiet bi di dong').
-teach_subject('Luong Vi Minh', 'Co so du lieu').
-teach_subject('Pham Tuan Son', 'Kien truc may tinh').
-teach_subject('Le Van Luyen', 'Toan to hop').
+phong_ban('Phong dao tao').
+phong_ban('Phong tai vu').
+phong_ban('Ban du an').
 
-student('Nguyen Chi Thuc', '1612677', date(1998, 1, 1), 'Ca Mau', 'male', '1612677@student.hcmus.edu.vn').
-student('Nguyen Tran Hau', '1612180', date(1998, 2, 2), 'Phu Yen', 'male', '1612180@student.hcmus.edu.vn').
-student('Tran Hoai Nam', '1612403', date(1998, 3, 3), 'Quang Ngai', 'male', '1612403@student.hcmus.edu.vn').
-student('Nguyen Buu Loc', '1612343', date(1998, 2, 3), 'Kien Giang', 'male', '1612343@student.hcmus.edu.vn').
-student('Tran Duy Thanh', '1612628', date(1997, 3, 2), 'Dong Nai', 'male', '1612628@student.hcmus.edu.vn').
-student('Ho Minh Huan', '1612224', date(1998, 6, 6), 'Son La', 'male','1612224@student.hcmus.edu.vn').
-student('Hoang Song Phuong', '1612999', date(1998, 9, 9), 'Phu Tho', 'female', '1612999@student.hcmus.edu.vn').
-student('Le Nhut', '1612666', '08/03/1998', date(1998, 1, 10), 'male', '1612666@student.hcmus.edu.vn').
+nam_thanh_lap('HCMUS', 2008).
+nam_thanh_lap('Cong nghe tri thuc', 2009).
+nam_thanh_lap('Khoa hoc may tinh', 2010).
+nam_thanh_lap('Cong nghe phan mem', 2010).
+nam_thanh_lap('Dai so', 2008).
+nam_thanh_lap('Giai tich', 2008).
+nam_thanh_lap('Di truyen', 2008).
+nam_thanh_lap('Vi sinh', 2009).
 
-study_subject('Nguyen Chi Thuc', 'Nhap mon cong nghe phan mem').
-study_subject('Nguyen Chi Thuc', 'Lap trinh tren thiet bi di dong').
-study_subject('Nguyen Tran Hau', 'Co so du lieu').
-study_subject('Nguyen Tran Hau', 'Kien truc may tinh').
-study_subject('Tran Hoai Nam', 'Tri tue nhan tao').
-study_subject('Tran Hoai Nam', 'Do hoa may tinh').
-study_subject('Nguyen Buu Loc', 'He dieu hanh').
-study_subject('Nguyen Buu Loc', 'Nhap mon cong nghe phan mem').
-study_subject('Tran Duy Thanh', 'Nhap mon cong nghe phan mem').
-study_subject('Tran Duy Thanh', 'Lap trinh tren thiet bi di dong').
-study_subject('Ho Minh Huan', 'Do hoa may tinh').
-study_subject('Ho Minh Huan', 'Toan to hop').
-study_subject('Hoang Song Phuong', 'Toan to hop').
-study_subject('Le Nhut', 'Tri tue nhan tao').
-study_subject('Le Nhut', 'Co so du lieu').
+giao_vien('Nguyen Dinh Thuc').
+giao_vien('Nguyen Van An').
+giao_vien('Le Hoai Bac').
+giao_vien('Luong Dinh Hoa').
+giao_vien('Nguyen Van Vu').
+giao_vien('Ha Anh Tuan').
+giao_vien('Son Tung').
+giao_vien('Hien Ho').
+giao_vien('Bich Phuong').
+giao_vien('Anh Duc').
+giao_vien('Bui Tien Dung').
+giao_vien('Cong Phuong').
+giao_vien('Le Quang Vinh').
+giao_vien('Vu Ha').
+giao_vien('Dinh Manh Ninh').
+giao_vien('Tang Thanh Ha').
+giao_vien('Dam Vinh Hung').
+giao_vien('Ly Tieu Long').
+giao_vien('Vo Thien Kim').
 
-% diem tich luy
-score('Nguyen Chi Thuc', 9.9).
-score('Nguyen Tran Hau', 8.0).
-score('Tran Hoai Nam', 7.9).
-score('Nguyen Buu Loc', 9.9).
-score('Tran Duy Thanh', 8.9).
-score('Ho Minh Huan', 7.9).
-score('Hoang Song Phuong', 4.9).
-score('Le Nhut', 5.9).
+giao_su('Nguyen Dinh Thuc').
+giao_su('Le Hoai Bac').
 
-% diem ren luyen
-drl('Nguyen Chi Thuc', 99).
-drl('Nguyen Tran Hau', 80).
-drl('Tran Hoai Nam', 79).
-drl('Nguyen Buu Loc', 99).
-drl('Tran Duy Thanh', 89).
-drl('Ho Minh Huan', 69).
-drl('Hoang Song Phuong', 49).
-drl('Le Nhut', 59).
+pho_giao_su('Nguyen Van An').
+pho_giao_su('Luong Dinh Hoa').
 
-% diem thi tieng anh chuyen nganh
-english_point('Nguyen Tran Hau', 7.0).
-english_point('Tran Hoai Nam', 6.9).
-english_point('Ho Minh Huan', 7.9).
-english_point('Hoang Song Phuong', 3.9).
-english_point('Le Nhut', 7.9).
+tien_si('Ha Anh Tuan').
+tien_si('Anh Duc').
+tien_si('Bui Tien Dung').
+tien_si('Vo Thien Kim').
 
-% co bang anh van tuong duong
-english_degree('Nguyen Chi Thuc', 'VNU').
-english_degree('Nguyen Buu Loc', 'VNU').
-english_degree('Tran Duy Thanh', 'VNU').
+thac_si('Son Tung').
+thac_si('Vu Ha').
+thac_si('Dam Vinh Hung').
+thac_si('Bich Phuong').
 
-is_student(Name) :-
-	student(Name, _, _, _, _, _).
+nghien_cuu_sinh('Hien Ho').
 
-is_teacher(Name) :-
-	teacher(Name, _, _).
+nam('Nguyen Dinh Thuc').
+nam('Nguyen Van An').
+nam('Le Hoai Bac').
+nam('Nguyen Van Vu').
+nam('Ha Anh Tuan').
+nam('Son Tung').
+nam('Anh Duc').
+nam('Bui Tien Dung').
+nam('Cong Phuong').
+nam('Le Quang Vinh').
 
-is_teacher_department(Name) :-
-	department_head(Name, _).
+nu('Luong Dinh Hoa').
+nu('Hien Ho').
+nu('Bich Phuong').
+nu('Tang Thanh Ha').
+nu('Vo Thien Kim').
 
-mssv(Student, MSSV) :-
-	student(Student, MSSV, _, _, _, _).
+ngay_sinh('Nguyen Dinh Thuc', date(1979, 1, 1)).
+ngay_sinh('Nguyen Van An', date(1979, 2, 1)).
+ngay_sinh('Le Hoai Bac', date(1981, 3, 2)).
+ngay_sinh('Luong Dinh Hoa', date(1988, 5, 5)).
+ngay_sinh('Nguyen Van Vu', date(1965, 10, 10)).
+ngay_sinh('Ha Anh Tuan', date(1972, 5, 7)).
+ngay_sinh('Son Tung', date(1973, 9, 9)).
+ngay_sinh('Hien Ho', date(1969, 8, 8)).
+ngay_sinh('Bich Phuong', date(1978, 1, 2)).
+ngay_sinh('Anh Duc', date(1979, 2, 3)).
+ngay_sinh('Bui Tien Dung', date(1980, 3, 4)).
+ngay_sinh('Cong Phuong', date(1981, 4, 5)).
+ngay_sinh('Le Quang Vinh', date(1982, 5, 6)).
 
-birthday(Student, Birthday) :-
-	student(Student, _, Birthday, _, _, _).
+dia_chi('Nguyen Dinh Thuc', '1 CMT8, HCM').
+dia_chi('Nguyen Van An', '20 Hoang Van Thu, HCM').
+dia_chi('Le Hoai Bac', '119 Ly Thuong Kiet, HCM').
+dia_chi('Luong Dinh Hoa', '223 Pasteur, HCM').
+dia_chi('Nguyen Van Vu', '337 Pham Ngoc Thach, HCM').
+dia_chi('Ha Anh Tuan', '521 3/2 HCM').
+dia_chi('Son Tung', '108 Tran Quoc Thao, HCM').
+dia_chi('Hien Ho', '131 Tran Quoc Toan, HCM').
+dia_chi('Bich Phuong', '200 Le Quang Dinh, HCM').
+dia_chi('Anh Duc', '18 Tran Quang Dieu, HCM').
+dia_chi('Bui Tien Dung', '979 Le Quang Sy, HCM').
+dia_chi('Cong Phuong', '333 Dien Bien Phu, HCM').
+dia_chi('Le Quang Vinh', '29 Hoang Dieu, HCM').
 
-same_year_birth(Student1, Student2) :-
-	student(Student1, _, date(Year1, _, _), _, _, _),
-	student(Student2, _, date(Year2, _, _), _, _, _),
-	Student1 \== Student2,
+que_quan('Nguyen Dinh Thuc', 'Phu Yen').
+que_quan('Nguyen Van An', 'Tien Giang').
+que_quan('Le Hoai Bac', 'Hau Giang').
+que_quan('Luong Dinh Hoa', 'HCM').
+que_quan('Nguyen Van Vu', 'Phu Yen').
+que_quan('Ha Anh Tuan', 'Soc Trang').
+que_quan('Son Tung', 'Ca Mau').
+que_quan('Hien Ho', 'Bac Lieu').
+que_quan('Bich Phuong', 'Khanh Hoa').
+que_quan('Anh Duc', 'Ha Noi').
+que_quan('Bui Tien Dung', 'Lang Son').
+que_quan('Cong Phuong', 'Tien Giang').
+que_quan('Le Quang Vinh', 'Dak Lak').
+
+truc_thuoc('CNTT', 'HCMUS').
+truc_thuoc('Toan-tin', 'HCMUS').
+truc_thuoc('Sinh hoc', 'HCMUS').
+truc_thuoc('Doan truong', 'HCMUS').
+truc_thuoc('Dang uy truong', 'HCMUS').
+truc_thuoc('Phong dao tao', 'HCMUS').
+truc_thuoc('Phong tai vu', 'HCMUS').
+truc_thuoc('Ban du an', 'HCMUS').
+
+truc_thuoc('Cong nghe tri thuc', 'CNTT').
+truc_thuoc('Khoa hoc may tinh', 'CNTT').
+truc_thuoc('Cong nghe phan mem', 'CNTT').
+truc_thuoc('Dai so', 'Toan-tin').
+truc_thuoc('Giai tich', 'Toan-tin').
+truc_thuoc('Di truyen', 'Sinh hoc').
+truc_thuoc('Vi sinh', 'Sinh hoc').
+
+truc_thuoc('Nguyen Dinh Thuc', 'Cong nghe tri thuc').
+truc_thuoc('Nguyen Van An', 'Cong nghe tri thuc').
+truc_thuoc('Le Hoai Bac', 'Khoa hoc may tinh').
+truc_thuoc('Luong Dinh Hoa', 'Khoa hoc may tinh').
+truc_thuoc('Nguyen Van Vu', 'Cong nghe phan mem').
+
+truc_thuoc('Cong Phuong', 'Dai so').
+truc_thuoc('Vu Ha', 'Dai so').
+truc_thuoc('Le Quang Vinh', 'Giai tich').
+truc_thuoc('Dinh Manh Ninh', 'Giai tich').
+truc_thuoc('Tang Thanh Ha', 'Di truyen').
+truc_thuoc('Vo Thien Kim', 'Di truyen').
+truc_thuoc('Dam Vinh Hung', 'Vi sinh').
+truc_thuoc('Ly Tieu Long', 'Vi sinh').
+
+truc_thuoc('Ha Anh Tuan', 'Doan truong').
+truc_thuoc('Son Tung', 'Dang uy truong').
+truc_thuoc('Hien Ho', 'Dang uy truong').
+
+truc_thuoc('Bich Phuong', 'Phong dao tao').
+truc_thuoc('Anh Duc', 'Phong tai vu').
+truc_thuoc('Bui Tien Dung', 'Ban du an').
+
+muc_luong_1('Ha Anh Tuan').
+muc_luong_1('Son Tung').
+muc_luong_1('Luong Dinh Hoa').
+muc_luong_1('Nguyen Van Vu').
+muc_luong_1('Ha Anh Tuan').
+
+muc_luong_2('Hien Ho').
+muc_luong_2('Bich Phuong').
+muc_luong_2('Anh Duc').
+muc_luong_2('Son Tung').
+
+muc_luong_3('Bui Tien Dung').
+muc_luong_3('Nguyen Dinh Thuc').
+muc_luong_3('Nguyen Van An').
+muc_luong_3('Le Hoai Bac').
+
+khen_thuong('Le Hoai Bac').
+khen_thuong('Nguyen Van Vu').
+
+ky_luat('Hien Ho').
+
+giao_vien_thuoc_bo_mon(GV, BM) :-
+	giao_vien(GV),
+	truc_thuoc(GV, BM),
+	bo_mon(BM).
+
+giao_vien_thuoc_khoa(GV, Khoa) :-
+	giao_vien(GV),
+	truc_thuoc(GV, BM),
+	bo_mon(BM),
+	truc_thuoc(BM, Khoa),
+	khoa(Khoa).
+
+giao_vien_thuoc_doan_the(GV, DoanThe) :-
+	giao_vien(GV),
+	truc_thuoc(GV, DoanThe),
+	doan_the(DoanThe).
+
+giao_vien_thuoc_phong_ban(GV, PhongBan) :-
+	giao_vien(GV),
+	truc_thuoc(GV, PhongBan),
+	phong_ban(PhongBan).
+
+giao_vien_thuoc_truong(GV, Truong) :-
+	giao_vien(GV),
+	truc_thuoc(GV, BM),
+	bo_mon(BM),
+	truc_thuoc(BM, Khoa),
+	khoa(Khoa),
+	truc_thuoc(Khoa, Truong),
+	truong(Truong).
+
+giao_vien_thuoc_truong(GV, Truong) :-
+	giao_vien(GV),
+	truc_thuoc(GV, DoanThe),
+	doan_the(DoanThe),
+	truc_thuoc(DoanThe, Truong),
+	truong(Truong).
+
+giao_vien_thuoc_truong(GV, Truong) :-
+	giao_vien(GV),
+	truc_thuoc(GV, PhongBan),
+	phong_ban(PhongBan),
+	truc_thuoc(PhongBan, Truong),
+	truong(Truong).
+
+bo_mon_thuoc_khoa(BM, Khoa) :-
+	bo_mon(BM),
+	truc_thuoc(BM, Khoa),
+	khoa(Khoa).
+
+bo_mon_thuoc_truong(BM, Truong) :-
+	bo_mon(BM),
+	truc_thuoc(BM, Khoa),
+	khoa(Khoa),
+	truc_thuoc(Khoa, Truong),
+	truong(Truong).
+
+doan_the_thuoc_truong(DoanThe, Truong) :-
+	doan_the(DoanThe),
+	truc_thuoc(DoanThe, Truong),
+	truong(Truong).
+
+phong_ban_thuoc_truong(PhongBan, Truong) :-
+	phong_ban(PhongBan),
+	truc_thuoc(PhongBan, Truong),
+	truong(Truong).
+
+khoa_thuoc_truong(Khoa, Truong) :-
+	khoa(Khoa),
+	truc_thuoc(Khoa, Truong),
+	truong(Truong).
+
+giao_vien_cung_bo_mon(GV1, GV2) :-
+	giao_vien_thuoc_bo_mon(GV1, BM1),
+	giao_vien_thuoc_bo_mon(GV2, BM2),
+	GV1 \== GV2,
+	BM1 == BM2.
+
+giao_vien_cung_khoa(GV1, GV2) :-
+	giao_vien_thuoc_khoa(GV1, Khoa1),
+	giao_vien_thuoc_khoa(GV2, Khoa2),
+	GV1 \== GV2,
+	Khoa1 == Khoa2.
+
+giao_vien_cung_doan_the(GV1, GV2) :-
+	giao_vien_thuoc_doan_the(GV1, DoanThe1),
+	giao_vien_thuoc_doan_the(GV2, DoanThe2),
+	GV1 \== GV2,
+	DoanThe1 == DoanThe2.
+
+giao_vien_cung_phong_ban(GV1, GV2) :-
+	giao_vien_thuoc_phong_ban(GV1, PhongBan1),
+	giao_vien_thuoc_phong_ban(GV2, PhongBan2),
+	GV1 \== GV2,
+	PhongBan1 == PhongBan2.
+
+giao_vien_cung_truong(GV1, GV2) :-
+	giao_vien_thuoc_truong(GV1, Truong1),
+	giao_vien_thuoc_truong(GV2, Truong2),
+	GV1 \== GV2,
+	Truong1 == Truong2.
+
+bo_mon_cung_khoa(BM1, BM2) :-
+	bo_mon_thuoc_khoa(BM1, Khoa1),
+	bo_mon_thuoc_khoa(BM2, Khoa2),
+	BM1 \== BM2,
+	Khoa1 == Khoa2.
+
+bo_mon_cung_truong(BM1, BM2) :-
+	bo_mon_thuoc_truong(BM1, Truong1),
+	bo_mon_thuoc_truong(BM2, Truong2),
+	BM1 \== BM2,
+	Truong1 == Truong2.
+
+khoa_cung_truong(Khoa1, Khoa2) :-
+	khoa_thuoc_truong(Khoa1, Truong1),
+	khoa_thuoc_truong(Khoa2, Truong2),
+	Khoa1 \== Khoa2,
+	Truong1 == Truong2.
+
+doan_the_cung_truong(DoanThe1, DoanThe2) :-
+	doan_the_thuoc_truong(DoanThe1, Truong1),
+	doan_the_thuoc_truong(DoanThe2, Truong2),
+	DoanThe1 \== DoanThe2,
+	Truong1 == Truong2.
+
+phong_ban_cung_truong(PhongBan1, PhongBan2) :-
+	phong_ban_thuoc_truong(PhongBan1, Truong1),
+	phong_ban_thuoc_truong(PhongBan2, Truong2),
+	PhongBan1 \== PhongBan2,
+	Truong1 == Truong2.
+
+cung_gioi_tinh(GV1, GV2) :-
+	nam(GV1),
+	nam(GV2),
+	GV1 \== GV2.
+
+cung_gioi_tinh(GV1, GV2) :-
+	nu(GV1),
+	nu(GV2),
+	GV1 \== GV2.
+
+cung_nam_sinh(GV1, GV2) :-
+	ngay_sinh(GV1, date(Year1, _, _)),
+	ngay_sinh(GV2, date(Year2, _, _)),
+	GV1 \== GV2,
 	Year1 == Year2.
 
-same_month_birth(Student1, Student2) :-
-	student(Student1, _, date(_, Month1, _), _, _, _),
-	student(Student2, _, date(_, Month2, _), _, _, _),
-	Student1 \== Student2,
+cung_thang_sinh(GV1, GV2) :-
+	ngay_sinh(GV1, date(Year1, Month1, _)),
+	ngay_sinh(GV2, date(Year2, Month2, _)),
+	GV1 \== GV2,
+	Year1 == Year2,
 	Month1 == Month2.
 
-same_day_birth(Student1, Student2) :-
-	student(Student1, _, date(_, _, Day1), _, _, _),
-	student(Student2, _, date(_, _, Day2), _, _, _),
-	Student1 \== Student2,
+cung_ngay_sinh(GV1, GV2) :-
+	ngay_sinh(GV1, date(Year1, Month1, Day1)),
+	ngay_sinh(GV2, date(Year2, Month2, Day2)),
+	GV1 \== GV2,
+	Year1 == Year2,
+	Month1 == Month2,
 	Day1 == Day2.
 
-same_date_birth(Student1, Student2) :-
-	same_year_birth(Student1, Student2),
-	same_month_birth(Student1, Student2),
-	same_day_birth(Student1, Student2).
-
-age(Student, Age) :-
-	student(Student, _, date(Year, _, _), _, _, _),
+tuoi_tac(GV, Tuoi) :-
+	ngay_sinh(GV, date(Year, _, _)),
 	% lay thoi gian hien tai
 	get_time(TimeStamp),
 	stamp_date_time(TimeStamp, DateTime, 'UTC'),
 	date_time_value(year, DateTime, YearNow),
-	Age is YearNow - Year.
+	Tuoi is YearNow - Year.
 
-same_age(Student1, Student2) :-
-	age(Student1, Age1),
-	age(Student2, Age2),
-	Student1 \== Student2,
-	Age1 == Age2.
+tuoi_bang_nhau(GV1, GV2) :-
+	tuoi_tac(GV1, Tuoi1),
+	tuoi_tac(GV2, Tuoi2),
+	GV1 \== GV2,
+	Tuoi1 == Tuoi2.
 
-older_age(Student1, Student2) :-
-	age(Student1, Age1),
-	age(Student2, Age2),
-	Student1 \== Student2,
-	Age1 > Age2.
+tuoi_lon_hon(GV1, GV2) :-
+	tuoi_tac(GV1, Tuoi1),
+	tuoi_tac(GV2, Tuoi2),
+	GV1 \== GV2,
+	Tuoi1 > Tuoi2.
 
-younger_age(Student1, Student2) :-
-	age(Student1, Age1),
-	age(Student2, Age2),
-	Student1 \== Student2,
-	Age1 < Age2.
+tuoi_nho_hon(GV1, GV2) :-
+	tuoi_tac(GV1, Tuoi1),
+	tuoi_tac(GV2, Tuoi2),
+	GV1 \== GV2,
+	Tuoi1 < Tuoi2.
 
-come_from(Student, ComeFrom) :-
-	student(Student, _, _, ComeFrom, _, _).
+luong(GV, Luong) :-
+	(muc_luong_1(GV),
+	Luong is 3000000);
+	(muc_luong_2(GV),
+	Luong is 4000000);
+	(muc_luong_3(GV),
+	Luong is 5000000).
 
-% vung ngheo 1, 2, 3
-poor_province_1(Student, ComeFrom) :-
-	student(Student, _, _, ComeFrom, _, _),
-	(ComeFrom == 'Ca Mau';
-		ComeFrom == 'Quang Ngai').
+tien_luong_bang_nhau(GV1, GV2) :-
+	luong(GV1, Luong1),
+	luong(GV2, Luong2),
+	GV1 \== GV2,
+	Luong1 == Luong2.
 
-poor_province_2(Student, ComeFrom) :-
-	student(Student, _, _, ComeFrom, _, _),
-	(ComeFrom == 'Son La';
-		ComeFrom == 'Phu Yen') .
+tien_luong_cao_hon(GV1, GV2) :-
+	luong(GV1, Luong1),
+	luong(GV2, Luong2),
+	GV1 \== GV2,
+	Luong1 > Luong2.
 
-poor_province_3(Student, ComeFrom) :-
-	student(Student, _, _, ComeFrom, _, _),
-	(ComeFrom == 'Kien Giang';
-		ComeFrom == 'Dong Nai').
+tien_luong_thap_hon(GV1, GV2) :-
+	luong(GV1, Luong1),
+	luong(GV2, Luong2),
+	GV1 \== GV2,
+	Luong1 < Luong2.
 
-% cung que
-same_come_from(Student1, Student2) :-
-	student(Student1, _, _, ComeFrom, _, _),
-	student(Student2, _, _, ComeFrom, _, _),
-	Student1 \== Student2.
-
-male(Student) :-
-	student(Student, _, _, _, Gender, _),
-	Gender == 'male'.
-
-male(Teacher) :-
-	teacher(Teacher, Gender, _),
-	Gender == 'male'.
-
-female(Student) :-
-	student(Student, _, _, _, Gender, _),
-	Gender == 'female'.
-
-female(Teacher) :-
-	teacher(Teacher, Gender, _),
-	Gender == 'female'.
-
-mail(Student, Mail) :-
-	student(Student, _, _, _, _, Mail).
-
-mail(Teacher, Mail) :-
-	teacher(Teacher, _, Mail).
-
-teach_student(Teacher, Student) :-
-	teach_subject(Teacher, Subject),
-	study_subject(Student, Subject).
-
-study_teacher(Student, Teacher) :-
-	teach_student(Teacher, Student).
-
-% hoc cung lop
-study_same_subject(Student1, Student2) :-
-	study_subject(Student1, Subject),
-	study_subject(Student2, Subject).
-
-better_score(Student1, Student2) :-
-	score(Student1, Score1),
-	score(Student2, Score2),
-	Score1 > Score2.
-
-lower_score(Student1, Student2) :-
-	score(Student1, Score1),
-	score(Student2, Score2),
-	Score1 < Score2.
-
-% xep loai hoc luc
-grade_S(Student) :-
-	score(Student, Score),
-	Score >= 9.
-
-grade_A(Student) :-
-	score(Student, Score),
-	Score >= 8,
-	Score < 9.
-
-grade_B(Student) :-
-	score(Student, Score),
-	Score >= 6.5,
-	Score < 8.
-
-grade_C(Student) :-
-	score(Student, Score),
-	Score >= 5,
-	Score < 6.5.
-
-grade_D(Student) :-
-	score(Student, Score),
-	Score < 5.
-
-% xep loai diem ren luyen
-drl_S(Student) :-
-	drl(Student, Drl),
-	Drl >= 90.
-
-drl_A(Student) :-
-	drl(Student, Drl),
-	Drl >= 80,
-	Drl < 90.
-
-drl_B(Student) :-
-	drl(Student, Drl),
-	Drl >= 65,
-	Drl < 80.
-
-drl_C(Student) :-
-	drl(Student, Drl),
-	Drl >= 50,
-	Drl < 65.
-
-drl_D(Student) :-
-	drl(Student, Drl),
-	Drl < 50.
-
-% hoc bong loai xuat sac, thi diem xuat sac, drl xuat sac hoac gioi
-scholarship_S(Student) :-
-	grade_S(Student),
-	(drl_S(Student);
-		drl_A(Student)).
-
-% hoc bong loai gioi, thi diem xuat sac, drl xuat sac hoac gioi
-scholarship_A(Student) :-
-	grade_A(Student),
-	(drl_S(Student);
-		drl_A(Student)).
-
-% co hoc bong
-has_scholarship(Student) :-
-	scholarship_S(Student);
-	scholarship_A(Student).
-
-% canh cao hoc vu neu diem thap hoac diem ren luyen thap
-punish(Student) :-
-	grade_D(Student);
-	drl_D(Student).
-
-% so tien tung mon hoc
-money_of_subject(Subject, Money) :-
-	subject_of_department(Subject, _),
-	Money is 1000000.
-
-% tinh tong so tien hoc sinh phai tra
-all_money_student_to_pay(Student, AllMoney) :-
-	findall(Money, (study_subject(Student, Subject),
-		money_of_subject(Subject, Money)), ListMoney),
-	sum_list(ListMoney, AllMoney).
-
-% du dieu kien hoc chuyen nganh neu tieng anh dat yeu cau
-english_enough_for_major(Student) :-
-	(english_point(Student, Point),
-	Point >= 5);
-	english_degree(Student, _).
-
-% mon hoc cung Khoa
-subject_same_department(Subject1, Subject2) :-
-	subject_of_department(Subject1, Department1),
-	subject_of_department(Subject2, Department2),
-	Subject1 \== Subject2,
-	Department1 == Department2.
+cung_que(GV1, GV2) :-
+	que_quan(GV1, Que1),
+	que_quan(GV2, Que2),
+	GV1 \== GV2,
+	Que1 == Que2.

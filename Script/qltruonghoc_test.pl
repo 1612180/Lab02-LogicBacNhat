@@ -1,104 +1,110 @@
-% load tri thuc
 :- [qltruonghoc, writeln].
 
-:- writeln('Go cau_1., cau_2., ... cau_25. de xem cau hoi va cau tra loi').
+:- writeln('Go cau_1., cau_2, ... cau_25. de xem cau hoi va cau tra loi').
 
 cau_1 :-
-	writeln('Nguyen Tran Hau co phai la sinh vien hay khong ?'),
-	is_student('Nguyen Tran Hau') -> writeln('Co'); writeln('Khong').
+	writeln('Nguyen Dinh Thuc la giao vien dung hay sai ?'),
+	giao_vien('Nguyen Dinh Thuc') -> writeln('Dung'); writeln('Sai').
 
 cau_2 :-
-	writeln('Nguyen Chi Thuc co hoc mon Tri tue nhan tao hay khong ?'),
-	study_subject('Nguyen Chi Thuc', 'Tri tue nhan tao') -> writeln('Co'); writeln('Khong').
+	writeln('Giao vien Le Hoai Bac la giao su dung hay sai ?'),
+	giao_su('Le Hoai Bac') -> writeln('Dung'); writeln('Sai').
 
 cau_3 :-
-	writeln('Le Hoai Bac co phai la giao vien hay khong ?'),
-	is_teacher('Le Hoai Bac') -> writeln('Co'); writeln('Khong').
+	writeln('Giao vien Le Quang Vinh la pho giao su dung hay sai ?'),
+	pho_giao_su('Le Quang Vinh') -> writeln('Dung'); writeln('Sai').
 
 cau_4 :-
-	writeln('Pham Tuan Son co phai la giao vien day Tri tue nhan tao hay khong ?'),
-	teach_subject('Pham Tuan Son', 'Tri tue nhan tao') -> writeln('Co'); writeln('Khong').
+	writeln('Giao vien Hien Ho la nghien cuu sinh dung hay sai ?'),
+	nghien_cuu_sinh('Hien Ho') -> writeln('Dung'); writeln('Sai').
 
 cau_5 :-
-	writeln('Le Hoai Bac co phai la truong bo mon hay khong ?'),
-	is_teacher_department('Le Hoai Bac') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet ngay sinh cua giao vien Ha Anh Tuan'),
+	ngay_sinh('Ha Anh Tuan', NgaySinh) -> writeln(NgaySinh); writeln('Khong biet').
 
 cau_6 :-
-	writeln('Le Hoai Bac co day Nguyen Chi Thuc khong ?'),
-	teach_student('Le Hoai Bac', 'Nguyen Chi Thuc') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet ngay sinh cua giao vien Cong Phuong'),
+	ngay_sinh('Cong Phuong', NgaySinh) -> writeln(NgaySinh); writeln('Khong biet').
 
 cau_7 :-
-	writeln('Dinh Ba Tien co day Nguyen Chi Thuc khong ?'),
-	teach_student('Dinh Ba Tien', 'Nguyen Chi Thuc') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet dia chi cua giao vien Anh Duc'),
+	dia_chi('Anh Duc', DiaChi) -> writeln(DiaChi); writeln('Khong biet').
 
 cau_8 :-
-	writeln('Nguyen Chi Thuc va Nguyen Tran Hau co cung que hay khong ?'),
-	same_come_from('Nguyen Chi Thuc', 'Nguyen Tran Hau') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet que quan cua giao vien Bich Phuong'),
+	que_quan('Bich Phuong', QueQuan) -> writeln(QueQuan); writeln('Khong biet').
 
 cau_9 :-
-	writeln('Tran Duy Thanh co phai la hoc sinh gioi hay khong ?'),
-	grade_A('Tran Duy Thanh') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet tien luong cua giao vien Bui Tien Dung'),
+	luong('Bui Tien Dung', Luong) -> writeln(Luong); writeln('Khong biet').
 
 cau_10 :-
-	writeln('Le Nhut co phai la hoc sinh trung binh hay khong ?'),
-	grade_C('Le Nhut') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet tien luong cua giao vien Luong Dinh Hoa'),
+	luong('Luong Dinh Hoa', Luong) -> writeln(Luong); writeln('Khong biet').
 
 cau_11 :-
-	writeln('Tran Hoai Nam co dat diem ren luyen gioi hay khong ?'),
-	drl_A('Tran Hoai Nam') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet Nguyen Dinh Thuc thuoc bo mon nao'),
+	giao_vien_thuoc_bo_mon('Nguyen Dinh Thuc', BM) -> writeln(BM); writeln('Khong biet').
 
 cau_12 :-
-	writeln('Nguyen Buu Loc co dat hoc bong xuat sac hay khong ?'),
-	scholarship_S('Nguyen Buu Loc') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet giao vien Ha Anh Tuan thuoc doan the nao'),
+	giao_vien_thuoc_doan_the('Ha Anh Tuan', DoanThe) -> writeln(DoanThe); writeln('Khong biet').
 
 cau_13 :-
-	writeln('Nguyen Tran Hau co dat hoc bong gioi hay khong ?'),
-	scholarship_A('Nguyen Tran Hau') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet giao vien Bui Tien Dung thuoc phong ban nao'),
+	giao_vien_thuoc_phong_ban('Bui Tien Dung', PhongBan) -> writeln(PhongBan); writeln('Khong biet').
 
 cau_14 :-
-	writeln('Hoang Song Phuong co hoc bong hay khong ?'),
-	has_scholarship('Hoang Song Phuong') -> writeln('Co'); writeln('Khong').
+	writeln('Liet ke danh sach khen thuong'),
+	findall(GV, khen_thuong(GV), List),
+	writeln(List).
 
 cau_15 :-
-	writeln('Hoang Song Phuong co gioi tinh nu dung hay sai ?'),
-	female('Hoang Song Phuong') -> writeln('Dung'); writeln('Sai').
+	writeln('Liet ke danh sach ky luat'),
+	findall(GV, ky_luat(GV), List),
+	writeln(List).
 
 cau_16 :-
-	writeln('Tran Hoai Nam co gioi tinh nam dung hay sai ?'),
-	male('Tran Hoai Nam') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet giao vien cung bo mon voi Cong Phuong'),
+	findall(GV, giao_vien_cung_bo_mon('Cong Phuong', GV), List),
+	writeln(List).
 
 cau_17 :-
-	writeln('Ngay sinh cua Hoang Song Phuong la ngay may ?'),
-	birthday('Hoang Song Phuong', Birthday) -> writeln(Birthday); writeln('Khong biet').
+	writeln('Vo Thien Kim va Ly Tieu Long la giao vien cung khoa dung hay sai ?'),
+	giao_vien_cung_khoa('Vo Thien Kim', 'Ly Tieu Long') -> writeln('Dung'); writeln('Sai').
 
 cau_18 :-
-	writeln('Cho biet MSSV cua Nguyen Chi Thuc ?'),
-	mssv('Nguyen Chi Thuc', MSSV) -> writeln(MSSV); writeln('Khong biet').
+	writeln('Bo mon Giai tich va Di truyen thuoc cung khoa dung hay sai ?'),
+	bo_mon_cung_khoa('Giai tich', 'Di truyen') -> writeln('Dung'); writeln('Sai').
 
 cau_19 :-
-	writeln('Nguyen Buu Loc co du dieu kien tieng anh de hoc chuyen nganh hay khong ?'),
-	english_enough_for_major('Nguyen Buu Loc') -> writeln('Co'); writeln('Khong').
+	writeln('Phong dao tao va Ban du an cung thuoc mot truong dung hay sai ?'),
+	phong_ban_cung_truong('Phong dao tao', 'Ban du an') -> writeln('Dung'); writeln('Sai').
 
 cau_20 :-
-	writeln('Nguyen Tran Hau va Nguyen Buu Loc co hoc chung lop hay khong ?'),
-	study_same_subject('Nguyen Tran Hau', 'Nguyen Buu Loc') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet tuoi cua giao vien Luong Dinh Hoa'),
+	tuoi_tac('Luong Dinh Hoa', Tuoi) -> writeln(Tuoi); writeln('Khong biet').
 
 cau_21 :-
-	writeln('So tien phai dong cua Nguyen Buu Loc la bao nhieu ?'),
-	all_money_student_to_pay('Nguyen Buu Loc', AllMoney) -> writeln(AllMoney); writeln('Khong biet').
+	writeln('Cho biet cac giao vien lon tuoi hon giao vien Hien Ho'),
+	findall(GV, tuoi_lon_hon(GV, 'Hien Ho'), List),
+	writeln(List).
 
 cau_22 :-
-	writeln('Hoang Song Phuong co bi canh cao hoc vu hay khong ?'),
-	punish('Hoang Song Phuong') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet cac giao vien nho tuoi hon giao vien Cong Phuong'),
+	findall(GV, tuoi_nho_hon(GV, 'Cong Phuong'), List),
+	writeln(List).
 
 cau_23 :-
-	writeln('Diem cua Nguyen Buu Loc co cao hon diem cua Nguyen Chi Thuc khong ?'),
-	better_score('Nguyen Buu Loc', 'Nguyen Chi Thuc') -> writeln('Co'); writeln('Khong').
+	writeln('Cho biet giao vien cung phong ban voi Hien Ho'),
+	findall(GV, giao_vien_cung_doan_the('Hien Ho', GV), List),
+	writeln(List).
 
 cau_24 :-
-	writeln('Cho biet mail cua Ho Minh Huan'),
-	mail('Ho Minh Huan', Mail) -> writeln(Mail); writeln('Khong biet').
+	writeln('Giao vien Bich Phuong va giao vien Bui Tien Dung co cung phong ban hay khong ?'),
+	giao_vien_thuoc_phong_ban('Bich Phuong', 'Bui Tien Dung') -> writeln('Co'); writeln('Khong').
 
 cau_25 :-
-	writeln('Tran Duy Thanh lon tuoi hon Ho Minh Huan dung hay sai ?'),
-	older_age('Tran Duy Thanh', 'Ho Minh Huan') -> writeln('Dung'); writeln('Sai').
+	writeln('Bo mon nao cung khoa voi bo mon Khoa hoc may tinh ?'),
+	findall(BM, bo_mon_cung_khoa('Khoa hoc may tinh', BM), List),
+	writeln(List).
